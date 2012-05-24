@@ -1,0 +1,64 @@
+* Mon Apr 16 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git5.0.0~alpha1
+- Automated source update
+
+* Mon Apr 16 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git5.0.0~alpha1
+- Automated source update
+
+* Mon Apr 16 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git5.0.0~alpha1
+- Automated source update
+
+* Mon Apr 16 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git5.0.0~alpha1
+- Automated source update
+
+* Mon Apr 16 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~gitv5.0.0alpha1
+- Automated source update
+
+* Sun Apr 15 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~gitqt-v5.0.0-alpha1
+- Automated source update
+
+* Sun Apr 15 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~gitqt-v5.0.0-alpha1
+- Automated source update
+
+* Sun Apr 15 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git
+- Automated source update
+
+* Sun Apr 15 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git
+- Automated source update
+
+* Thu Apr 12 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git
+- Automated source update
+
+* Tue Mar  6 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git73.g794a97b
+- Automated source update
+
+* Tue Mar  6 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git73.g794a97b
+- Automated source update
+
+* Sat Feb 25 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git71.gce5ac2d
+- Automated source update
+
+* Wed Feb 15 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git69.gfe0bc6a
+- Automated source update
+
+* Sun Feb  5 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git68.g2419aef
+- Automated source update
+
+* Sun Jan 15 2012 Mika Boström <mika.bostrom@nomovok.com> - 5~git63.gdb6a188
+- Automated source update
+
+* Wed Oct  5 2011 Mika Boström <mika.bostrom@nomovok.com> - 5~git56.g33e7480
+- Automated source update
+
+* Mon Jul 25 2011 Mika Boström <mika.bostrom@nomovok.com> - 5~git49.g33e7480
+- Automated source update
+
+* Tue Jul 12 2011 Mika Boström <mika.bostrom@nomovok.com> - 4.9.90.20110711
+- Update and rebuild against latest qtbase snapshot
+
+* Fri Jul  8 2011 Mika Boström <mika.bostrom@nomovok.com> - 4.9.90.20110701-2
+- Fix build
+- Add image format plugin package
+
+* Thu Jul  7 2011 Mika Boström <mika.bostrom@nomovok.com> - 4.9.90.20110701
+- Initial packaging
+- Builds against packages from qtbase build
