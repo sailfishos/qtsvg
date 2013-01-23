@@ -1,7 +1,7 @@
-%define _qtmodule_snapshot_version 5.0.0-beta1
+%define _qtmodule_snapshot_version 5.0.0
 Name:       qt5-qtsvg
 Summary:    Qt scripting module
-Version:    5.0.0~beta1
+Version:    5.0.0
 Release:    1%{?dist}
 Group:      Qt/Qt
 License:    LGPLv2.1 with exception or GPLv3
@@ -93,13 +93,13 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 
 %files
 %defattr(-,root,root,-)
-%{_libdir}/libQtSvg.so.5
-%{_libdir}/libQtSvg.so.5.*
+%{_libdir}/libQt5Svg.so.5
+%{_libdir}/libQt5Svg.so.5.*
 
 %files devel
 %defattr(-,root,root,-)
-%{_libdir}/libQtSvg.so
-%{_libdir}/libQtSvg.prl
+%{_libdir}/libQt5Svg.so
+%{_libdir}/libQt5Svg.prl
 %{_libdir}/pkgconfig/*
 %{_includedir}/qt5/*
 %{_datadir}/qt5/mkspecs/
