@@ -58,6 +58,7 @@ This package contains the SVG icon image plugin
 
 %build
 export QTDIR=/usr/share/qt5
+touch .git
 qmake -qt=5
 make %{?_smp_flags}
 
