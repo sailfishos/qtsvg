@@ -41,26 +41,14 @@ Requires:   %{name} = %{version}-%{release}
 %description plugin-imageformat-svg
 This package contains the SVG image format plugin
 
-%package plugin-iconengine-svg
-Summary:    Qt SVG icon image plugin
-Group:      Qt/Qt
-Requires:   %{name} = %{version}-%{release}
-
-%description plugin-iconengine-svg
-This package contains the SVG icon image plugin
-
-
-
-#### Build section
-
 %prep
 %setup -q -n %{name}-%{version}/qtsvg
 
 %build
 export QTDIR=/usr/share/qt5
 touch .git
-qmake -qt=5
-make %{?_smp_flags}
+%qmake5 QT.widgets.name= DEFINES+=QT_NO_WIDGETS
+make %{_smp_mflags}
 
 %install
 rm -rf %{buildroot}
@@ -74,19 +62,10 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %fdupes %{buildroot}/%{_includedir}
 
 
-
-
-#### Pre/Post section
-
 %post
 /sbin/ldconfig
 %postun
 /sbin/ldconfig
-
-
-
-
-#### File section
 
 
 %files
@@ -107,8 +86,3 @@ find %{buildroot}%{_libdir} -type f -name '*.prl' \
 %defattr(-,root,root,-)
 %{_libdir}/qt5/plugins/imageformats/lib*svg.so
 
-%files plugin-iconengine-svg
-%defattr(-,root,root,-)
-%{_libdir}/qt5/plugins/iconengines/lib*svg*.so
-
-#### No changelog section, separate $pkg.changes contains the history
