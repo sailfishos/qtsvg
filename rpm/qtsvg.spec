@@ -58,6 +58,9 @@ rm -f %{buildroot}/%{_libdir}/*.la
 # Fix wrong path in prl files
 find %{buildroot}%{_libdir} -type f -name '*.prl' \
 -exec sed -i -e "/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/" {} \;
+# these manage to really royally screw up cmake
+find %{buildroot}%{_libdir} -type f -name "*_*Plugin.cmake" \
+-exec rm {} \;
 #
 %fdupes %{buildroot}/%{_includedir}
 
