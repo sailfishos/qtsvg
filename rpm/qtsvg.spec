@@ -1,10 +1,9 @@
 Name:       qt5-qtsvg
-Summary:    Qt scripting module
+Summary:    Qt SVG module
 Version:    5.6.2
 Release:    1%{?dist}
-Group:      Qt/Qt
-License:    LGPLv2.1 with exception or GPLv3
-URL:        http://qt.nokia.com
+License:    (LGPLv2 or LGPLv3) with exception or GPLv3 or Qt Commercial
+URL:        http://www.qt.io
 Source0:    %{name}-%{version}.tar.bz2
 BuildRequires:  qt5-qtcore-devel
 BuildRequires:  qt5-qtgui-devel
@@ -23,7 +22,6 @@ This package contains the SVG module
 
 %package devel
 Summary:    Qt SVG - development files
-Group:      Qt/Qt
 Requires:   %{name} = %{version}-%{release}
 
 %description devel
@@ -35,7 +33,6 @@ This package contains the SVG module development files
 
 %package plugin-imageformat-svg
 Summary:    Qt SVG image format plugin
-Group:      Qt/Qt
 Requires:   %{name} = %{version}-%{release}
 
 %description plugin-imageformat-svg
@@ -73,6 +70,10 @@ find %{buildroot}%{_libdir} -type f -name "*_*Plugin.cmake" \
 
 %files
 %defattr(-,root,root,-)
+%license LICENSE.LGPLv21
+%license LICENSE.LGPLv3
+%license LGPL_EXCEPTION.txt
+
 %{_libdir}/libQt5Svg.so.5
 %{_libdir}/libQt5Svg.so.5.*
 
