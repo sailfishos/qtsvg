@@ -1,7 +1,7 @@
 Name:       qt5-qtsvg
 Summary:    Qt SVG module
 Version:    5.6.2
-Release:    1%{?dist}
+Release:    1
 License:    (LGPLv2 or LGPLv3) with exception or GPLv3 or Qt Commercial
 URL:        http://www.qt.io
 Source0:    %{name}-%{version}.tar.bz2
@@ -42,13 +42,11 @@ This package contains the SVG image format plugin
 %setup -q -n %{name}-%{version}
 
 %build
-export QTDIR=/usr/share/qt5
 touch .git
 %qmake5 QT.widgets.name= DEFINES+=QT_NO_WIDGETS
-make %{_smp_mflags}
+%make_build
 
 %install
-rm -rf %{buildroot}
 %qmake5_install
 # Remove unneeded .la files
 rm -f %{buildroot}/%{_libdir}/*.la
@@ -62,10 +60,8 @@ find %{buildroot}%{_libdir} -type f -name "*_*Plugin.cmake" \
 %fdupes %{buildroot}/%{_includedir}
 
 
-%post
-/sbin/ldconfig
-%postun
-/sbin/ldconfig
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 
 %files
@@ -74,20 +70,20 @@ find %{buildroot}%{_libdir} -type f -name "*_*Plugin.cmake" \
 %license LICENSE.LGPLv3
 %license LGPL_EXCEPTION.txt
 
-%{_libdir}/libQt5Svg.so.5
-%{_libdir}/libQt5Svg.so.5.*
+%{_qt5_libdir}/libQt5Svg.so.5
+%{_qt5_libdir}/libQt5Svg.so.5.*
 
 %files devel
 %defattr(-,root,root,-)
-%{_libdir}/libQt5Svg.so
-%{_libdir}/libQt5Svg.prl
-%{_libdir}/pkgconfig/*
-%{_includedir}/qt5/*
-%{_datadir}/qt5/mkspecs/
-%{_libdir}/cmake/
+%{_qt5_libdir}/libQt5Svg.so
+%{_qt5_libdir}/libQt5Svg.prl
+%{_qt5_libdir}/pkgconfig/*
+%{_qt5_includedir}/*
+%{_qt5_archdatadir}/mkspecs/
+%{_qt5_libdir}/cmake/
 
 %files plugin-imageformat-svg
 %defattr(-,root,root,-)
-%{_libdir}/qt5/plugins/imageformats/lib*svg.so
-%{_libdir}/qt5/plugins/iconengines/libqsvgicon.so
+%{_qt5_plugindir}/imageformats/lib*svg.so
+%{_qt5_plugindir}/iconengines/libqsvgicon.so
 
